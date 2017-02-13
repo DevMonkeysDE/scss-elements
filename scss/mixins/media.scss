@@ -1,0 +1,102 @@
+// RESOLUTIONS
+//////////////////////////////////////////
+$resMobile: 480px; //  480 x  320
+$resTablet: 768px; //  768 x  576
+$resDesktop: 1280px; // 1280 x  768
+$resHD: 1920px + 1px; // 1920 x 1080
+$resWQHD: 2560px + 1px; // 2560 x 1440
+$resUHD1: 3840px + 1px; // 3840 x 2160
+
+// MEDIA QUERIE MIXIN
+//////////////////////////////////////////
+@mixin mediaMin($var) {
+  @if $var == resMobile {
+    @media only screen and (min-width: $resMobile) {
+      @content;
+    }
+  } @else if $var == resTablet {
+    @media only screen and (min-width: $resTablet) {
+      @content;
+    }
+  } @else if $var == SresDesktop {
+    @media only screen and (min-width: $resDesktop) {
+      @content;
+    }
+  } @else if $var == resHD {
+    @media only screen and (min-width: $resHD) {
+      @content;
+    }
+  } @else if $var == resWQHD {
+    @media only screen and (min-width: $resWQHD) {
+      @content;
+    }
+  } @else if $var == resUHD1 {
+    @media only screen and (min-width: $resUHD1) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $var) {
+      @content;
+    }
+  }
+}
+
+@mixin mediaMax($var) {
+  @if $var == resMobile {
+    @media only screen and (max-width: $resMobile) {
+      @content;
+    }
+  } @else if $var == resTablet {
+    @media only screen and (max-width: $resTablet) {
+      @content;
+    }
+  } @else if $var == SresDesktop {
+    @media only screen and (max-width: $resDesktop) {
+      @content;
+    }
+  } @else if $var == resHD {
+    @media only screen and (max-width: $resHD) {
+      @content;
+    }
+  } @else if $var == resWQHD {
+    @media only screen and (max-width: $resWQHD) {
+      @content;
+    }
+  } @else if $var == resUHD1 {
+    @media only screen and (max-width: $resUHD1) {
+      @content;
+    }
+  } @else {
+    @media only screen and (max-width: $var) {
+      @content;
+    }
+  }
+}
+
+@mixin mediaFromTo($var1, $var2: null) {
+  @if $var1 == resMobile {
+    @media only screen and (min-width: $resMobile) and (max-width: $resTablet) {
+      @content;
+    }
+  } @else if $var1 == resTablet {
+    @media only screen and (min-width: $resTablet) and (max-width: $resDesktop) {
+      @content;
+    }
+  } @else if $var1 == resDesktop {
+    @media only screen and (min-width: $resDesktop) and (max-width: $resHD) {
+      @content;
+    }
+  } @else if $var1 == resHD {
+    @media only screen and (min-width: $resHD) and (max-width: $resWQHD) {
+      @content;
+    }
+  } @else if $var1 == resWQHD {
+    @media only screen and (min-width: $resWQHD) and (max-width: $resUHD1) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width: $var1) and (max-width: $var2) {
+      @content;
+    }
+  }
+}
