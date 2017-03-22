@@ -7,7 +7,7 @@
 }
 
 @mixin mediaMax($var) {
-  @media only screen and (max-width: $var) {
+  @media only screen and (max-width: $var - 1px) {
     @content;
   }
 }
