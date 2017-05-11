@@ -13,7 +13,7 @@
 }
 
 @mixin mediaFromTo($var1, $var2) {
-  @media only screen and (min-width: $var1) and (max-width: $var2) {
+  @media only screen and (min-width: $var1) and (max-width: $var2 - 1px) {
     @content;
   }
 }
