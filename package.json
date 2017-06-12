@@ -1,6 +1,6 @@
 {
   "name": "@devmonkeys/scss-elements",
-  "version": "1.0.6",
+  "version": "1.0.9",
   "description": "SCSS Framework",
   "main": "index.js",
   "keywords": [
@@ -10,6 +10,6 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://git.upperyard.de/Budi/scss-elements"
+    "url": "git+https://github.com/DevMonkeysDE/scss-elements"
   }
 }
