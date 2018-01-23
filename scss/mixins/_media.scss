@@ -29,3 +29,9 @@
     @content;
   }
 }
+
+@mixin mediaOrientation($orientation) {
+  @media only screen and (orientation: $orientation) {
+    @content;
+  }
+}
