@@ -6,8 +6,20 @@
   }
 }
 
+@mixin mediaMinAndOrientation($var, $orientation) {
+  @media only screen and (min-width: $var) and (orientation: $orientation) {
+    @content;
+  }
+}
+
 @mixin mediaMax($var) {
   @media only screen and (max-width: $var - 1px) {
+    @content;
+  }
+}
+
+@mixin mediaMaxAndOrientation($var, $orientation) {
+  @media only screen and (max-width: $var - 1px) and (orientation: $orientation) {
     @content;
   }
 }
