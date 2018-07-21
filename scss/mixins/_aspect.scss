@@ -1,19 +1,9 @@
-// ASPECT RATIO
-////////////////////////////////////////
-// 4-3  = 75% //////////////////////////
-// 16-9 = 56.25% ///////////////////////
-// Full = 100% /////////////////////////
-////////////////////////////////////////
-
-@mixin aspect() {
-  &:before {
-    content: '';
-    display: block;
-  }
-}
-
-@mixin ratio($ratio: 56.25%) {
-  &:before {
-    padding-top: $ratio;
-  }
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+    &:before {
+        display: block;
+        content: "";
+        width: 100%;
+        padding-top: ($height / $width) * 100%;
+    }
 }
