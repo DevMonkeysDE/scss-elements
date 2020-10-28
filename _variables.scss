@@ -1,71 +1,86 @@
 :root {
-    /* https://material-ui.com/customization/breakpoints/ */
-    --resMat-xs:                    0;
-    --resMat-sm:                    600px;
-    --resMat-md:                    960px;
-    --resMat-lg:                    1280px;
-    --resMat-xl:                    1920px;
+    // https://material-ui.com/customization/breakpoints/
+    --resMat-xs:                0;
+    --resMat-sm:                600px;
+    --resMat-md:                960px;
+    --resMat-lg:                1280px;
+    --resMat-xl:                1920px;
 
-    /* Spacings */
-    --spacing-xs:                    24px;
-    --spacing-sm:                    24px;
-    --spacing-md:                    32px;
-    --spacing-lg:                    32px;
-    --spacing-xl:                    64px;
+    // Spacings
+    --spacing-xs:               24px;
+    --spacing-sm:               24px;
+    --spacing-md:               32px;
+    --spacing-lg:               32px;
+    --spacing-xl:               64px;
 
-    --spacing-offset:                16px;
+    --spacing-offset:           16px;
 
-    /*Max Widths*/
-    --headerMaxWidth:                var(--resMat-lg);
-    --contentMaxWidth:               var(--resMat-lg);
-    --footerMaxWidth:                var(--resMat-lg);
+    // Max Widths
+    --header-max-width:         var(--resMat-lg);
+    --content-max-width:        var(--resMat-lg);
+    --footer-max-width:         var(--resMat-lg);
 
-    /*Colors*/
-    --primaryColor:                  #182D4C;
-    --primaryColorContrast:          #E9F0FA;
-    --secondaryColor:                #ff6520;
-    --secondaryColorContrast:        #f2f2f2;
+    // Colors
+    --primary-color:            #182D4C;
+    --primary-color-contrast:   #E9F0FA;
+    --secondary-color:          #ff6520;
+    --secondary-color-contrast: #f2f2f2;
 
-    /* Typography */
-    --paragraphFontWeight:           400;
-    --headlineFontWeight:            700;
-    /* H1 */
-    --h1FontSize:                    64;
-    --h1LineHeight:                  70;
-    /* H2 */
-    --h2FontSize:                    44;
-    --h2LineHeight:                  52;
-    /* H3 */
-    --h3FontSize:                    32;
-    --h3LineHeight:                  40;
-    /* H4 */
-    --h4FontSize:                    28;
-    --h4LineHeight:                  32;
-    /* H5 */
-    --h5FontSize:                    22;
-    --h5LineHeight:                  24;
-    /* H6 */
-    --h6FontSize:                    18;
-    --h6LineHeight:                  24;
-    /* Paragraph ultra-small */
-    --paragraphUltraSmallFontSize:   10;
-    --paragraphUltraSmallLineHeight: 12;
-    /* Paragraph very-small */
-    --paragraphVerySmallFontSize:    12;
-    --paragraphVerySmallLineHeight:  14;
-    /* Paragraph small */
-    --paragraphSmallFontSize:        14;
-    --paragraphSmallLineHeight:      18;
-    /* Paragraph default */
-    --paragraphDefaultFontSize:      16;
-    --paragraphDefaultLineHeight:    24;
-    /* Paragraph large */
-    --paragraphLargeFontSize:        18;
-    --paragraphLargeLineHeight:      28;
-    /* Paragraph very-large */
-    --paragraphVeryLargeFontSize:    22;
-    --paragraphVeryLargeLineHeight:  30;
-    /* Paragraph ultra-large */
-    --paragraphUltraLargeFontSize:   26;
-    --paragraphUltraLargeLineHeight: 34;
+    // Typography
+    --heading-font-weight:      700;
+    --paragraph-font-weight:    400;
+
+    // Heading 1
+    --h1-font-size:             64;
+    --h1-line-height:           70;
+    --h1-font-weight:           var(--heading-font-weight);
+    // Heading 2
+    --h2-font-size:             44;
+    --h2-line-height:           52;
+    --h2-font-weight:           var(--heading-font-weight);
+    // Heading 3
+    --h3-font-size:             32;
+    --h3-line-height:           40;
+    --h3-font-weight:           var(--heading-font-weight);
+    // Heading 4
+    --h4-font-size:             28;
+    --h4-line-height:           32;
+    --h4-font-weight:           var(--heading-font-weight);
+    // Heading 5
+    --h5-font-size:             22;
+    --h5-line-height:           24;
+    --h5-font-weight:           var(--heading-font-weight);
+    // Heading 6
+    --h6-font-size:             18;
+    --h6-line-height:           24;
+    --h6-font-weight:           var(--heading-font-weight);
+
+    // Paragraph ultra-small
+    --paragraph-ultra-small-font-size:      10;
+    --paragraph-ultra-small-line-height:    12;
+    --paragraph-ultra-small-font-weight:    var(--paragraph-font-weight);
+    // Paragraph very-small
+    --paragraph-very-small-font-size:       12;
+    --paragraph-very-small-line-height:     14;
+    --paragraph-very-small-font-weight:     var(--paragraph-font-weight);
+    // Paragraph small
+    --paragraph-small-font-size:            14;
+    --paragraph-small-line-height:          18;
+    --paragraph-small-font-weight:          var(--paragraph-font-weight);
+    // Paragraph default
+    --paragraph-default-font-size:          16;
+    --paragraph-default-line-height:        24;
+    --paragraph-default-font-weight:        var(--paragraph-font-weight);
+    // Paragraph large
+    --paragraph-large-font-size:            18;
+    --paragraph-large-line-height:          28;
+    --paragraph-large-font-weight:          var(--paragraph-font-weight);
+    // Paragraph very-large
+    --paragraph-very-large-font-size:       22;
+    --paragraph-very-large-line-height:     30;
+    --paragraph-very-large-font-weight:     var(--paragraph-font-weight);
+    // Paragraph ultra-large
+    --paragraph-ultra-large-font-size:      26;
+    --paragraph-ultra-large-line-height:    34;
+    --paragraph-ultra-large-font-weight:    var(--paragraph-font-weight);
 }
