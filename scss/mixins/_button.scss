@@ -1,7 +1,0 @@
-@mixin btn-color($x: $green) {
-    color: contrast($x);
-    background-color: $x;
-    &:hover, &:focus {
-        background-color: darken($x, 5%);
-    }
-}

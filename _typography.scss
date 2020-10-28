@@ -1,0 +1,56 @@
+@import "loader";
+@import "functions/px-to-em";
+@import "vendor/rfs";
+
+// Typography
+h1, .h1-style {
+    @include h1-style();
+}
+
+h2, .h2-style {
+    @include h2-style();
+}
+
+h3, .h3-style {
+    @include h3-style();
+}
+
+h4, .h4-style {
+    @include h4-style();
+}
+
+h5, .h5-style {
+    @include h5-style();
+}
+
+h6, .h6-style {
+    @include h6-style();
+}
+
+.typo-style-ultra-small {
+    @include typo-style('ultra-small');
+}
+
+.typo-style-very-small {
+    @include typo-style('very-small');
+}
+
+.typo-style-small {
+    @include typo-style('small');
+}
+
+p, .typo-style-default {
+    @include typo-style('default');
+}
+
+.typo-style-large {
+    @include typo-style('large');
+}
+
+.typo-style-very-large {
+    @include typo-style('very-large');
+}
+
+.typo-style-ultra-large {
+    @include typo-style('ultra-large');
+}

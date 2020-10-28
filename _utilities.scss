@@ -1,0 +1,47 @@
+@import "loader";
+
+// No Margin / Padding Classes
+@each $type in (margin), (padding) {
+    .no-#{$type} {
+        #{$type}: 0 !important;
+    }
+
+    @each $direction in (top), (right), (bottom), (left) {
+        .no-#{$type}-#{$direction} {
+            #{$type}-#{$direction}: 0 !important;
+        }
+    }
+}
+
+// Spacing
+.inner-space {
+    @include innerSpace();
+}
+
+.negate-inner-space {
+    @include negateInnerSpace();
+}
+
+.negate-inner-space-vertical {
+    @include negateInnerSpace('vertical');
+}
+
+.negate-inner-space-horizontal {
+    @include negateInnerSpace('horizontal');
+}
+
+.negate-inner-space-top {
+    @include negateInnerSpace('top');
+}
+
+.negate-inner-space-right {
+    @include negateInnerSpace('right');
+}
+
+.negate-inner-space-bottom {
+    @include negateInnerSpace('bottom');
+}
+
+.negate-inner-space-left {
+    @include negateInnerSpace('left');
+}

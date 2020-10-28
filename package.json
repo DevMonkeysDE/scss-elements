@@ -1,12 +1,15 @@
 {
     "name": "@devmonkeys/scss-elements",
-    "version": "1.2.4",
+    "version": "3.0.9",
     "description": "A simple SCSS-Framework with some usefull stuff",
     "main": "style.scss",
+    "scripts": {
+        "scss-build": "node-sass style.scss -o assets/css --output-style"
+    },
     "keywords": [
         "scss"
     ],
-    "author": "Sven Budak <sven@budak.info> (http://mywebexile.de)",
+    "author": "Sven Budak <sven@budak.info> (https://devmonkeys.io/)",
     "license": "ISC",
     "repository": {
         "type": "git",

@@ -1,0 +1,47 @@
+@mixin innerSpaceAlignments() {
+    width: 100%;
+    max-width: var(--contentMaxWidth);
+    margin: auto;
+}
+
+@mixin innerSpace() {
+    padding: var(--spacing-xs) var(--spacing-offset);
+    @include mediaMin(var(--resMat-sm)) {
+        padding: var(--spacing-sm) var(--spacing-offset);
+    }
+    @include mediaMin(var(--resMat-md)) {
+        padding: var(--spacing-md) var(--spacing-offset);
+    }
+    @include mediaMin(var(--resMat-lg)) {
+        padding: var(--spacing-lg) var(--spacing-offset);
+    }
+    @include mediaMin(var(--resMat-xl)) {
+        padding: var(--spacing-xl) var(--spacing-offset);
+    }
+}
+
+@mixin negateInnerSpace($var: 'default') {
+    @if ($var == 'default') {
+        padding: 0;
+    }
+    @if ($var == 'vertical') {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    @if ($var == 'horizontal') {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    @if ($var == 'top') {
+        padding-top: 0;
+    }
+    @if ($var == 'right') {
+        padding-right: 0;
+    }
+    @if ($var == 'bottom') {
+        padding-bottom: 0;
+    }
+    @if ($var == 'left') {
+        padding-left: 0;
+    }
+}

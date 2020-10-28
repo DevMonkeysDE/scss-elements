@@ -1,0 +1,71 @@
+:root {
+    /* https://material-ui.com/customization/breakpoints/ */
+    --resMat-xs:                    0;
+    --resMat-sm:                    600px;
+    --resMat-md:                    960px;
+    --resMat-lg:                    1280px;
+    --resMat-xl:                    1920px;
+
+    /* Spacings */
+    --spacing-xs:                    24px;
+    --spacing-sm:                    24px;
+    --spacing-md:                    32px;
+    --spacing-lg:                    32px;
+    --spacing-xl:                    64px;
+
+    --spacing-offset:                16px;
+
+    /*Max Widths*/
+    --headerMaxWidth:                var(--resMat-lg);
+    --contentMaxWidth:               var(--resMat-lg);
+    --footerMaxWidth:                var(--resMat-lg);
+
+    /*Colors*/
+    --primaryColor:                  #182D4C;
+    --primaryColorContrast:          #E9F0FA;
+    --secondaryColor:                #ff6520;
+    --secondaryColorContrast:        #f2f2f2;
+
+    /* Typography */
+    --paragraphFontWeight:           400;
+    --headlineFontWeight:            700;
+    /* H1 */
+    --h1FontSize:                    64;
+    --h1LineHeight:                  70;
+    /* H2 */
+    --h2FontSize:                    44;
+    --h2LineHeight:                  52;
+    /* H3 */
+    --h3FontSize:                    32;
+    --h3LineHeight:                  40;
+    /* H4 */
+    --h4FontSize:                    28;
+    --h4LineHeight:                  32;
+    /* H5 */
+    --h5FontSize:                    22;
+    --h5LineHeight:                  24;
+    /* H6 */
+    --h6FontSize:                    18;
+    --h6LineHeight:                  24;
+    /* Paragraph ultra-small */
+    --paragraphUltraSmallFontSize:   10;
+    --paragraphUltraSmallLineHeight: 12;
+    /* Paragraph very-small */
+    --paragraphVerySmallFontSize:    12;
+    --paragraphVerySmallLineHeight:  14;
+    /* Paragraph small */
+    --paragraphSmallFontSize:        14;
+    --paragraphSmallLineHeight:      18;
+    /* Paragraph default */
+    --paragraphDefaultFontSize:      16;
+    --paragraphDefaultLineHeight:    24;
+    /* Paragraph large */
+    --paragraphLargeFontSize:        18;
+    --paragraphLargeLineHeight:      28;
+    /* Paragraph very-large */
+    --paragraphVeryLargeFontSize:    22;
+    --paragraphVeryLargeLineHeight:  30;
+    /* Paragraph ultra-large */
+    --paragraphUltraLargeFontSize:   26;
+    --paragraphUltraLargeLineHeight: 34;
+}
