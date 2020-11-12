@@ -1,18 +1,23 @@
 @use "sass:string";
 
-@mixin set-font($font-family, $font-weight, $font-path, $local-src..., $font-style: normal) {
+// Use it like this:
+// @include font-face("'Roboto', sans-serif", 400, '../../fonts/roboto.woff2', 'Roboto Regular', 'Roboto-Regular');
+
+@mixin font-face($font-family: 'Roboto', $font-weight: 400, $font-path: '../', $local-src...) {
 
     $src: "";
 
-    @each $i in $local-src {
-        $src: string.insert($src, "<" + $i + "> ", -0);
-        // Need to pass this: local('Roboto Light'), local('Roboto-Light'), url($font-path) format('woff2'); to the @each
+    @if(length($local-src) > 0) {
+        @each $i in $local-src {
+            $src: string.insert($src, "local('" + string.unquote($i) + "'), ", -0);
+        }
     }
 
     @font-face {
         font-family: $font-family;
-        font-style: $font-style;
+        font-style: normal;
         font-weight: $font-weight;
-        src: $src; // what i want here local('Roboto Light'), local('Roboto-Light'), url($font-path) format('woff2');
+        src: string.unquote($src) url($font-path) format('woff2')
     }
+
 }
