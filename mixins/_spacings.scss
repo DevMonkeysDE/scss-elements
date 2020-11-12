@@ -1,26 +1,26 @@
-@mixin innerSpaceAlignments() {
+@mixin inner-space-alignments() {
     width: 100%;
     max-width: var(--content-max-width);
     margin: auto;
 }
 
-@mixin innerSpace() {
+@mixin inner-space() {
     padding: var(--spacing-xs) var(--spacing-offset);
-    @include mediaMin(var(--resMat-sm)) {
+    @include media-min($res-mat-sm) {
         padding: var(--spacing-sm) var(--spacing-offset);
     }
-    @include mediaMin(var(--resMat-md)) {
+    @include media-min($res-mat-md) {
         padding: var(--spacing-md) var(--spacing-offset);
     }
-    @include mediaMin(var(--resMat-lg)) {
+    @include media-min($res-mat-lg) {
         padding: var(--spacing-lg) var(--spacing-offset);
     }
-    @include mediaMin(var(--resMat-xl)) {
+    @include media-min($res-mat-xl) {
         padding: var(--spacing-xl) var(--spacing-offset);
     }
 }
 
-@mixin negateInnerSpace($var: 'default') {
+@mixin negate-inner-space($var: 'default') {
     @if ($var == 'default') {
         padding: 0;
     }
@@ -43,5 +43,39 @@
     }
     @if ($var == 'left') {
         padding-left: 0;
+    }
+}
+
+@mixin element-space($type: 'margin', $directions...) {
+    @if(length($directions) > 0) {
+        @each $direction in $directions {
+            #{$type}-#{$direction}: var(--spacing-xs);
+            @include media-min($res-mat-sm) {
+                #{$type}-#{$direction}: var(--spacing-sm);
+            }
+            @include media-min($res-mat-md) {
+                #{$type}-#{$direction}: var(--spacing-md);
+            }
+            @include media-min($res-mat-lg) {
+                #{$type}-#{$direction}: var(--spacing-lg);
+            }
+            @include media-min($res-mat-xl) {
+                #{$type}-#{$direction}: var(--spacing-xl);
+            }
+        }
+    } @else {
+        #{$type}: var(--spacing-xs);
+        @include media-min($res-mat-sm) {
+            #{$type}: var(--spacing-sm);
+        }
+        @include media-min($res-mat-md) {
+            #{$type}: var(--spacing-md);
+        }
+        @include media-min($res-mat-lg) {
+            padding: var(--spacing-lg);
+        }
+        @include media-min($res-mat-xl) {
+            padding: var(--spacing-xl);
+        }
     }
 }

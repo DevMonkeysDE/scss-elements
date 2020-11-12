@@ -1,0 +1,18 @@
+@use "sass:string";
+
+@mixin set-font($font-family, $font-weight, $font-path, $local-src..., $font-style: normal) {
+
+    $src: "";
+
+    @each $i in $local-src {
+        $src: string.insert($src, "<" + $i + "> ", -0);
+        // Need to pass this: local('Roboto Light'), local('Roboto-Light'), url($font-path) format('woff2'); to the @each
+    }
+
+    @font-face {
+        font-family: $font-family;
+        font-style: $font-style;
+        font-weight: $font-weight;
+        src: $src; // what i want here local('Roboto Light'), local('Roboto-Light'), url($font-path) format('woff2');
+    }
+}

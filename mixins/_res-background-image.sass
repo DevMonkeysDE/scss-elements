@@ -1,4 +1,4 @@
-@mixin resBgImg($path: '/assets/images/', $fileName: null, $resolutions: null, $fileType: '.jpg', $unitType: 'px', $startFrom: 0)
+@mixin res-background-image($path: '/assets/images/', $fileName: null, $resolutions: null, $fileType: '.jpg', $unitType: 'px', $startFrom: 0)
     @for $i from 1 through length($resolutions)
         $min: $startFrom
         @if $i > 1

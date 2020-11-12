@@ -1,74 +1,74 @@
 // Typography
 @mixin h1-style() {
-    @include font-size(var(--h1-font-size));
+    font-size: var(--h1-font-size);
     font-weight: var(--h1-font-weight);
-    line-height: em(var(--h1-line-height), var(--h1-font-size));
+    line-height: var(--h1-line-height);
 }
 
 @mixin h2-style() {
-    @include font-size(var(--h2-font-size));
+    font-size: var(--h2-font-size);
     font-weight: var(--h2-font-weight);
-    line-height: em(var(--h2-line-height), var(--h2-font-size));
+    line-height: var(--h2-line-height);
 }
 
 @mixin h3-style() {
-    @include font-size(var(--h3-font-size));
+    font-size: var(--h3-font-size);
     font-weight: var(--h3-font-weight);
-    line-height: em(var(--h3-line-height), var(--h3-font-size));
+    line-height: var(--h3-line-height);
 }
 
 @mixin h4-style() {
-    @include font-size(var(--h4-font-size));
+    font-size: var(--h4-font-size);
     font-weight: var(--h4-font-weight);
-    line-height: em(var(--h4-line-height), var(--h4-font-size));
+    line-height: var(--h4-line-height);
 }
 
 @mixin h5-style() {
-    @include font-size(var(--h5-font-size));
+    font-size: var(--h5-font-size);
     font-weight: var(--h5-font-weight);
-    line-height: em(var(--h5-line-height), var(--h5-font-size));
+    line-height: var(--h5-line-height);
 }
 
 @mixin h6-style() {
-    @include font-size(var(--h6-font-size));
+    font-size: var(--h6-font-size);
     font-weight: var(--h6-font-weight);
-    line-height: em(var(--h6-line-height), var(--h6-font-size));
+    line-height: var(--h6-line-height);
 }
 
 @mixin typo-style($var: 'default') {
     @if($var == 'ultra-small') {
-        @include font-size(var(--paragraph-ultra-small-font-size));
+        font-size: var(--paragraph-ultra-small-font-size);
         font-weight: var(--paragraph-ultra-small-font-weight);
-        line-height: em(var(--paragraph-ultra-small-line-height), var(--paragraph-ultra-small-font-size));
+        line-height: var(--paragraph-ultra-small-line-height);
     }
     @if($var == 'very-small') {
-        @include font-size(var(--paragraph-very-small-font-size));
+        font-size: var(--paragraph-very-small-font-size);
         font-weight: var(--paragraph-very-small-font-weight);
-        line-height: em(var(--paragraph-very-small-line-height), var(--paragraph-very-small-font-size));
+        line-height: var(--paragraph-very-small-line-height);
     }
     @if($var == 'small') {
-        @include font-size(var(--paragraph-small-font-size));
+        font-size: var(--paragraph-small-font-size);
         font-weight: var(--paragraph-small-font-weight);
-        line-height: em(var(--paragraph-small-line-height), var(--paragraph-small-font-size));
+        line-height: var(--paragraph-small-line-height);
     }
     @if($var == 'default') {
-        @include font-size(var(--paragraph-default-font-size));
+        font-size: var(--paragraph-default-font-size);
         font-weight: var(--paragraph-default-font-weight);
-        line-height: em(var(--paragraph-default-line-height), var(--paragraph-default-font-size));
+        line-height: var(--paragraph-default-line-height);
     }
     @if($var == 'large') {
-        @include font-size(var(--paragraph-large-font-size));
+        font-size: var(--paragraph-large-font-size);
         font-weight: var(--paragraph-large-font-weight);
-        line-height: em(var(--paragraph-large-line-height), var(--paragraph-large-font-size));
+        line-height: var(--paragraph-large-line-height);
     }
     @if($var == 'very-large') {
-        @include font-size(var(--paragraph-very-large-font-size));
+        font-size: var(--paragraph-very-large-font-size);
         font-weight: var(--paragraph-very-large-font-weight);
-        line-height: em(var(--paragraph-very-large-line-height), var(--paragraph-very-large-font-size));
+        line-height: var(--paragraph-very-large-line-height);
     }
     @if($var == 'ultra-large') {
-        @include font-size(var(--paragraph-ultra-large-font-size));
+        font-size: var(--paragraph-ultra-large-font-size);
         font-weight: var(--paragraph-ultra-large-font-weight);
-        line-height: em(var(--paragraph-ultra-large-line-height), var(--paragraph-ultra-large-font-size));
+        line-height: var(--paragraph-ultra-large-line-height);
     }
 }

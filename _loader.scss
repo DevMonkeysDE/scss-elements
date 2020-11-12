@@ -3,10 +3,11 @@
 
 // Mixins
 @import "mixins/aspect-ratio";
+// @import "mixins/font-face";
 @import "mixins/media";
 @import "mixins/perfect-grid";
-@import "mixins/pos-full";
-@import "mixins/res-bg-img";
+@import "mixins/position-full";
+@import "mixins/res-background-image";
 @import "mixins/scrollbar";
 @import "mixins/spacings";
 @import "mixins/typography";
