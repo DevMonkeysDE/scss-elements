@@ -1,5 +1,5 @@
 $browser-context: 16px; // Default
 
 @function px-to-em($pixels, $context: $browser-context) {
-    @return $pixels / $browser-context * 1em;
+    @return $pixels / $context * 1em;
 }
