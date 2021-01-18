@@ -1,9 +1,16 @@
 // https://material-ui.com/customization/breakpoints/
-$res-mat-xs: 0 !default;
-$res-mat-sm: 600px !default;
-$res-mat-md: 960px !default;
-$res-mat-lg: 1280px !default;
-$res-mat-xl: 1920px !default;
+$res-mat-xs: 0 !default;        // Smartphone
+$res-mat-sm: 600px !default;    // Tablet
+$res-mat-md: 960px !default;    // Large Tablet
+$res-mat-lg: 1280px !default;   // Large Tablet and Notebooks
+$res-mat-xl: 1920px !default;   // Desktop +
+
+// https://ionicframework.com/docs/layout/grid#grid-size
+$res-ion-xs: 0 !default;        // Smartphone
+$res-ion-sm: 540px !default;    // Tablet
+$res-ion-md: 720px !default;    // Tablet
+$res-ion-lg: 960px !default;    // Large Tablet and Notebooks
+$res-ion-xl: 1140px !default;   // Desktop +
 
 // Spacings
 $spacing-xs: 24px !default;

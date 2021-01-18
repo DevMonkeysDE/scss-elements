@@ -72,10 +72,10 @@
             #{$type}: var(--spacing-md);
         }
         @include media-min($res-mat-lg) {
-            padding: var(--spacing-lg);
+            #{$type}: var(--spacing-lg);
         }
         @include media-min($res-mat-xl) {
-            padding: var(--spacing-xl);
+            #{$type}: var(--spacing-xl);
         }
     }
 }
