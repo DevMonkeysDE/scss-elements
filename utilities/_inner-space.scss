@@ -1,33 +1,33 @@
-@import "loader";
+@import "../loader";
 
 .inner-space {
-    @include innerSpace();
+    @include inner-space();
 }
 
 .negate-inner-space {
-    @include negateInnerSpace();
+    @include negate-inner-space();
 }
 
 .negate-inner-space-vertical {
-    @include negateInnerSpace('vertical');
+    @include negate-inner-space('vertical');
 }
 
 .negate-inner-space-horizontal {
-    @include negateInnerSpace('horizontal');
+    @include negate-inner-space('horizontal');
 }
 
 .negate-inner-space-top {
-    @include negateInnerSpace('top');
+    @include negate-inner-space('top');
 }
 
 .negate-inner-space-right {
-    @include negateInnerSpace('right');
+    @include negate-inner-space('right');
 }
 
 .negate-inner-space-bottom {
-    @include negateInnerSpace('bottom');
+    @include negate-inner-space('bottom');
 }
 
 .negate-inner-space-left {
-    @include negateInnerSpace('left');
+    @include negate-inner-space('left');
 }
