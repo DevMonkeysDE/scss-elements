@@ -7,10 +7,10 @@ $res-mat-xl: 1920px !default;   // Desktop +
 
 // https://ionicframework.com/docs/layout/grid#grid-size
 $res-ion-xs: 0 !default;        // Smartphone
-$res-ion-sm: 540px !default;    // Tablet
-$res-ion-md: 720px !default;    // Tablet
-$res-ion-lg: 960px !default;    // Large Tablet and Notebooks
-$res-ion-xl: 1140px !default;   // Desktop +
+$res-ion-sm: 576px !default;    // Tablet
+$res-ion-md: 768px !default;    // Tablet
+$res-ion-lg: 992px !default;    // Large Tablet and Notebooks
+$res-ion-xl: 1200px !default;   // Desktop +
 
 // Spacings
 $spacing-xs: 24px !default;
