@@ -204,7 +204,7 @@ $paragraph-ultra-large-line-height: #{px-to-em(34px, 26px)} !default;
 }
 
 @mixin typo-style($var: 'default', $important: 'normal') {
-    @if ($var == 'ultra-small',) {
+    @if ($var == 'ultra-small') {
         @if ($important == 'normal') {
             font-size: var(--paragraph-ultra-small-font-size);
             font-weight: var(--paragraph-ultra-small-font-weight);
