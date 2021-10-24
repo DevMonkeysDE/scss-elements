@@ -271,23 +271,6 @@ $rfs-mq-property-height: if($rfs-mode == max-media-query, max-height, min-height
     }
 }
 
-// RFS function
-@function rfs($values) {
-    @if $values == null or $values == () {
-        @return null;
-    }
-
-    $val: '';
-
-    // Loop over each value and calculate value
-    @each $value in $values {
-        $val: $val + ' ' + rfs-value($value);
-    }
-
-    // Remove first space
-    @return unquote(str-slice($val, 2));
-}
-
 // Shorthand helper mixins
 @mixin font-size($value) {
     @include rfs($value);
