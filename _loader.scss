@@ -15,3 +15,4 @@
 @import "mixins/res-background-image";
 @import "mixins/scrollbar";
 @import "mixins/spacings";
+@import "mixins/typography"; // This Mixins will work only if you import somewhere the typography.scss from the root.
