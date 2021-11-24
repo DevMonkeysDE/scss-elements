@@ -1,0 +1,134 @@
+$breakpoints: (
+    xs: $res-xs,
+    sm: $res-sm,
+    md: $res-md,
+    lg: $res-lg,
+    xl: $res-xl
+) !default;
+
+// Configure Utilities Typography Headline Styles
+$headline-variants: 'h1', 'h2', 'h3', 'h4', 'h5', 'h6' !default;
+$headline-styles: false !default;
+$headline-styles-breakpoints-min: false !default;
+$headline-styles-breakpoints-max: false !default;
+$headline-styles-breakpoints-from-to: false !default;
+// Configure Utilities Typography Paragraph Styles
+$paragraph-variants: 'ultra-small', 'very-small', 'small', 'default', 'large', 'very-large', 'ultra-large' !default;
+$paragraph-styles: false !default;
+$paragraph-styles-breakpoints-min: false !default;
+$paragraph-styles-breakpoints-max: false !default;
+$paragraph-styles-breakpoints-from-to: false !default;
+
+
+// Headline Styles
+@if $headline-styles {
+    @each $variant in $headline-variants {
+        .#{$variant}-style {
+            @include headline-style(#{$variant}, 'important');
+        }
+    }
+}
+
+// Headline Styles with Breakpoints - Min
+@if $headline-styles-breakpoints-min {
+    @each $breakpoint, $res in $breakpoints {
+        @include media-min($res) {
+            @each $variant in $headline-variants {
+                .#{$variant}-style-min-#{$breakpoint} {
+                    @include headline-style(#{$variant}, 'important');
+                }
+            }
+        }
+    }
+}
+
+// Headline Styles with Breakpoints - Max
+@if $headline-styles-breakpoints-max {
+    @each $breakpoint, $res in $breakpoints {
+        @include media-max($res) {
+            @each $variant in $headline-variants {
+                .#{$variant}-style-max-#{$breakpoint} {
+                    @include headline-style(#{$variant}, 'important');
+                }
+            }
+        }
+    }
+}
+
+// Headline Styles with Breakpoints - FromTo
+@if $headline-styles-breakpoints-from-to {
+    @each $breakpointFrom, $resFrom in $breakpoints {
+        $typo-breakpoint-keys: map-keys($breakpoints);
+        $iFrom: index($typo-breakpoint-keys, $breakpointFrom);
+
+        @each $breakpointTo, $resTo in $breakpoints {
+            $iTo: index($typo-breakpoint-keys, $breakpointTo);
+
+            @if $iTo > $iFrom {
+                @include media-from-to($resFrom, $resTo) {
+                    @each $variant in $headline-variants {
+                        .#{$variant}-style-from-#{$breakpointFrom}-to-#{$breakpointTo} {
+                            @include headline-style(#{$variant}, 'important');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Paragraph Styles
+@if $paragraph-styles {
+    @each $variant in $paragraph-variants {
+        .typo-style-#{$variant} {
+            @include typo-style(#{$variant}, 'important');
+        }
+    }
+}
+
+// Paragraph Styles with Breakpoints - Min
+@if $paragraph-styles-breakpoints-min {
+    @each $breakpoint, $res in $breakpoints {
+        @include media-min($res) {
+            @each $variant in $paragraph-variants {
+                .typo-style-#{$variant}-min-#{$breakpoint} {
+                    @include typo-style(#{$variant}, 'important');
+                }
+            }
+        }
+    }
+}
+// Paragraph Styles with Breakpoints - Max
+@if $paragraph-styles-breakpoints-max {
+    @each $breakpoint, $res in $breakpoints {
+        @include media-max($res) {
+            @each $variant in $paragraph-variants {
+                .typo-style-#{$variant}-max-#{$breakpoint} {
+                    @include typo-style(#{$variant}, 'important');
+                }
+            }
+        }
+    }
+}
+
+// Paragraph Styles with Breakpoints - FromTo
+@if $paragraph-styles-breakpoints-from-to {
+    @each $breakpointFrom, $resFrom in $breakpoints {
+        $typo-breakpoint-keys: map-keys($breakpoints);
+        $iFrom: index($typo-breakpoint-keys, $breakpointFrom);
+
+        @each $breakpointTo, $resTo in $breakpoints {
+            $iTo: index($typo-breakpoint-keys, $breakpointTo);
+
+            @if $iTo > $iFrom {
+                @include media-from-to($resFrom, $resTo) {
+                    @each $variant in $paragraph-variants {
+                        .typo-style-#{$variant}-from-#{$breakpointFrom}-to-#{$breakpointTo} {
+                            @include typo-style(#{$variant}, 'important');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

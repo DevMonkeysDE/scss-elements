@@ -1,3 +1,8 @@
+// @import "variables"; // Only for debugging / testing needed. In Real Project this comes from loader.scss
+// @import "vendor/rfs"; // Only for debugging / testing needed. In Real Project this comes from loader.scss
+// @import "functions/px-to-em"; // Only for debugging / testing needed. In Real Project this comes from loader.scss
+// @import "functions/px-to-rem"; // Only for debugging / testing needed. In Real Project this comes from loader.scss
+// @import "mixins/media"; // Only for debugging / testing needed. In Real Project this comes from loader.scss
 @import "mixins/typography";
 
 
@@ -123,83 +128,14 @@ $paragraph-ultra-large-line-height: #{em(34px, 26px)} !default;
 }
 
 
-// Typography
-h1 {
-    @include h1-style();
-}
+// Headline Styles
+h1 { @include headline-style('h1'); }
+h2 { @include headline-style('h2'); }
+h3 { @include headline-style('h3'); }
+h4 { @include headline-style('h4'); }
+h5 { @include headline-style('h5'); }
+h6 { @include headline-style('h6'); }
 
-.h1-style {
-    @include h1-style('important');
-}
+p { @include typo-style('default'); }
 
-h2 {
-    @include h2-style();
-}
-
-.h2-style {
-    @include h2-style('important');
-}
-
-h3 {
-    @include h3-style();
-}
-
-.h3-style {
-    @include h3-style('important');
-}
-
-h4 {
-    @include h4-style();
-}
-
-.h4-style {
-    @include h4-style('important');
-}
-
-h5 {
-    @include h5-style();
-}
-
-.h5-style {
-    @include h5-style('important');
-}
-
-h6 {
-    @include h6-style();
-}
-
-.h6-style {
-    @include h6-style('important');
-}
-
-.typo-style-ultra-small {
-    @include typo-style('ultra-small', 'important');
-}
-
-.typo-style-very-small {
-    @include typo-style('very-small', 'important');
-}
-
-.typo-style-small {
-    @include typo-style('small', 'important');
-}
-
-p {
-    @include typo-style('default');
-}
-
-.typo-style-default {
-    @include typo-style('default', 'important');
-}
-
-.typo-style-large {
-    @include typo-style('large', 'important');
-}
-
-.typo-style-very-large {
-    @include typo-style('very-large', 'important');
-}
-
-.typo-style-ultra-large {
-    @include typo-style('ultra-large', 'important');
-}
+@import "utilities/typography";

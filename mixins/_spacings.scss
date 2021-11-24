@@ -6,16 +6,16 @@
 
 @mixin inner-space() {
     padding: var(--spacing-xs) var(--spacing-offset);
-    @include media-min($res-mat-sm) {
+    @include media-min($res-sm) {
         padding: var(--spacing-sm) var(--spacing-offset);
     }
-    @include media-min($res-mat-md) {
+    @include media-min($res-md) {
         padding: var(--spacing-md) var(--spacing-offset);
     }
-    @include media-min($res-mat-lg) {
+    @include media-min($res-lg) {
         padding: var(--spacing-lg) var(--spacing-offset);
     }
-    @include media-min($res-mat-xl) {
+    @include media-min($res-xl) {
         padding: var(--spacing-xl) var(--spacing-offset);
     }
 }
@@ -50,31 +50,31 @@
     @if(length($directions) > 0) {
         @each $direction in $directions {
             #{$type}-#{$direction}: var(--spacing-xs);
-            @include media-min($res-mat-sm) {
+            @include media-min($res-sm) {
                 #{$type}-#{$direction}: var(--spacing-sm);
             }
-            @include media-min($res-mat-md) {
+            @include media-min($res-md) {
                 #{$type}-#{$direction}: var(--spacing-md);
             }
-            @include media-min($res-mat-lg) {
+            @include media-min($res-lg) {
                 #{$type}-#{$direction}: var(--spacing-lg);
             }
-            @include media-min($res-mat-xl) {
+            @include media-min($res-xl) {
                 #{$type}-#{$direction}: var(--spacing-xl);
             }
         }
     } @else {
         #{$type}: var(--spacing-xs);
-        @include media-min($res-mat-sm) {
+        @include media-min($res-sm) {
             #{$type}: var(--spacing-sm);
         }
-        @include media-min($res-mat-md) {
+        @include media-min($res-md) {
             #{$type}: var(--spacing-md);
         }
-        @include media-min($res-mat-lg) {
+        @include media-min($res-lg) {
             #{$type}: var(--spacing-lg);
         }
-        @include media-min($res-mat-xl) {
+        @include media-min($res-xl) {
             #{$type}: var(--spacing-xl);
         }
     }

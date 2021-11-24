@@ -1,6 +1,6 @@
 {
     "name": "@devmonkeys/scss-elements",
-    "version": "3.2.50",
+    "version": "4.0.1",
     "description": "A simple SCSS-Framework with some usefull stuff",
     "main": "style.scss",
     "scripts": {
@@ -17,6 +17,6 @@
     },
     "devDependencies": {
         "http-server": "^0.12.3",
-        "sass": "^1.43.2"
+        "sass": "^1.43.4"
     }
 }

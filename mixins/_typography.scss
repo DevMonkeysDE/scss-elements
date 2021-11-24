@@ -1,87 +1,85 @@
 // Functions
-@import "../functions/px-to-em";
-@import "../functions/px-to-rem";
-@import "../vendor/rfs";
+@use "../functions/px-to-em";
+@use "../functions/px-to-rem";
+@use "../vendor/rfs";
 
-// Typography
-@mixin h1-style($important: 'normal') {
-    @if ($important == 'normal') {
-        font-size: var(--h1-font-size);
-        font-weight: var(--h1-font-weight);
-        line-height: var(--h1-line-height);
+// Headline Styles
+@mixin headline-style($var: 'h1', $important: 'normal') {
+    @if ($var == 'h1') {
+        @if ($important == 'normal') {
+            font-size: var(--h1-font-size);
+            font-weight: var(--h1-font-weight);
+            line-height: var(--h1-line-height);
+        }
+        @if ($important == 'important') {
+            font-size: var(--h1-font-size) !important;
+            font-weight: var(--h1-font-weight) !important;
+            line-height: var(--h1-line-height) !important;
+        }
     }
-    @if ($important == 'important') {
-        font-size: var(--h1-font-size) !important;
-        font-weight: var(--h1-font-weight) !important;
-        line-height: var(--h1-line-height) !important;
+    @if ($var == 'h2') {
+        @if ($important == 'normal') {
+            font-size: var(--h2-font-size);
+            font-weight: var(--h2-font-weight);
+            line-height: var(--h2-line-height);
+        }
+        @if ($important == 'important') {
+            font-size: var(--h2-font-size) !important;
+            font-weight: var(--h2-font-weight) !important;
+            line-height: var(--h2-line-height) !important;
+        }
+    }
+    @if ($var == 'h3') {
+        @if ($important == 'normal') {
+            font-size: var(--h3-font-size);
+            font-weight: var(--h3-font-weight);
+            line-height: var(--h3-line-height);
+        }
+        @if ($important == 'important') {
+            font-size: var(--h3-font-size) !important;
+            font-weight: var(--h3-font-weight) !important;
+            line-height: var(--h3-line-height) !important;
+        }
+    }
+    @if ($var == 'h4') {
+        @if ($important == 'normal') {
+            font-size: var(--h4-font-size);
+            font-weight: var(--h4-font-weight);
+            line-height: var(--h4-line-height);
+        }
+        @if ($important == 'important') {
+            font-size: var(--h4-font-size) !important;
+            font-weight: var(--h4-font-weight) !important;
+            line-height: var(--h4-line-height) !important;
+        }
+    }
+    @if ($var == 'h5') {
+        @if ($important == 'normal') {
+            font-size: var(--h5-font-size);
+            font-weight: var(--h5-font-weight);
+            line-height: var(--h5-line-height);
+        }
+        @if ($important == 'important') {
+            font-size: var(--h5-font-size) !important;
+            font-weight: var(--h5-font-weight) !important;
+            line-height: var(--h5-line-height) !important;
+        }
+    }
+    @if ($var == 'h6') {
+        @if ($important == 'normal') {
+            font-size: var(--h6-font-size);
+            font-weight: var(--h6-font-weight);
+            line-height: var(--h6-line-height);
+        }
+        @if ($important == 'important') {
+            font-size: var(--h6-font-size) !important;
+            font-weight: var(--h6-font-weight) !important;
+            line-height: var(--h6-line-height) !important;
+        }
     }
 }
 
-@mixin h2-style($important: 'normal') {
-    @if ($important == 'normal') {
-        font-size: var(--h2-font-size);
-        font-weight: var(--h2-font-weight);
-        line-height: var(--h2-line-height);
-    }
-    @if ($important == 'important') {
-        font-size: var(--h2-font-size) !important;
-        font-weight: var(--h2-font-weight) !important;
-        line-height: var(--h2-line-height) !important;
-    }
-}
-
-@mixin h3-style($important: 'normal') {
-    @if ($important == 'normal') {
-        font-size: var(--h3-font-size);
-        font-weight: var(--h3-font-weight);
-        line-height: var(--h3-line-height);
-    }
-    @if ($important == 'important') {
-        font-size: var(--h3-font-size) !important;
-        font-weight: var(--h3-font-weight) !important;
-        line-height: var(--h3-line-height) !important;
-    }
-}
-
-@mixin h4-style($important: 'normal') {
-    @if ($important == 'normal') {
-        font-size: var(--h4-font-size);
-        font-weight: var(--h4-font-weight);
-        line-height: var(--h4-line-height);
-    }
-    @if ($important == 'important') {
-        font-size: var(--h4-font-size) !important;
-        font-weight: var(--h4-font-weight) !important;
-        line-height: var(--h4-line-height) !important;
-    }
-}
-
-@mixin h5-style($important: 'normal') {
-    @if ($important == 'normal') {
-        font-size: var(--h5-font-size);
-        font-weight: var(--h5-font-weight);
-        line-height: var(--h5-line-height);
-    }
-    @if ($important == 'important') {
-        font-size: var(--h5-font-size) !important;
-        font-weight: var(--h5-font-weight) !important;
-        line-height: var(--h5-line-height) !important;
-    }
-}
-
-@mixin h6-style($important: 'normal') {
-    @if ($important == 'normal') {
-        font-size: var(--h6-font-size);
-        font-weight: var(--h6-font-weight);
-        line-height: var(--h6-line-height);
-    }
-    @if ($important == 'important') {
-        font-size: var(--h6-font-size) !important;
-        font-weight: var(--h6-font-weight) !important;
-        line-height: var(--h6-line-height) !important;
-    }
-}
-
+// Typo Styles
 @mixin typo-style($var: 'default', $important: 'normal') {
     @if ($var == 'ultra-small') {
         @if ($important == 'normal') {

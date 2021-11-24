@@ -1,4 +1,4 @@
-// MEDIA QUERIE MIXIN
+// MEDIA QUERY MIXINS
 //////////////////////////////////////////
 @mixin media-min($var) {
     @media only screen and (min-width: $var) {
